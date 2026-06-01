@@ -33,7 +33,7 @@ func New(config Config) *RateLimiter {
 	return rl
 }
 
-func (rl *RateLimiter) Allow(key string) (Result, error) 
+func (rl *RateLimiter) Allow(key string) (Result, error) {
 	data, err := rl.store.Get(key)
 	if err != nil {
 		return Result{}, err
